@@ -137,7 +137,7 @@ node {
 
         stage('Send Success Email') {
             echo "Sending email notification..."
-            mail (
+            emailext (
                 to: "${EMAIL}",
                 subject: "Next.js App Deployment Success",
                 body: "The Next.js application has been deployed successfully to the EC2 instance. http://16.170.250.202:${HOST_PORT}/"
@@ -148,7 +148,7 @@ node {
         // Jodi uporer kono ekta stage-e error ashe, tahole ekhane chole ashbe
         stage('Send Failure Email') {
             echo "Deployment failed! Sending failure email..."
-            mail (
+            emailext (
                 to: "${EMAIL}",
                 subject: "Next.js App Deployment FAILED",
                 body: "The deployment pipeline failed. Please check Jenkins logs."
