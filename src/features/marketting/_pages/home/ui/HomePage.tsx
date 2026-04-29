@@ -1,7 +1,7 @@
 const HomePage = () => {
     return (
         <div>
-            JENKINS +AWS +UBUNTU +GITHUB CI/CD + start3
+            JENKINS +AWS +UBUNTU +GITHUB CI/CD + start4
         </div>
     );
 }
